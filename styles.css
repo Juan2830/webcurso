@@ -1,0 +1,195 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;               /* Usamos Flexbox */
+    flex-direction: column;      /* Colocamos los elementos en columna */
+    min-height: 100vh;           /* Aseguramos que el cuerpo ocupe al menos el 100% de la altura de la pantalla */
+}
+
+/* .container ocupa todo el espacio disponible entre el header y el footer */
+.container {
+    flex: 1;
+}
+
+/* Estilos del encabezado */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 5px solid #0056b3;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Barra de navegación debajo del título */
+.barra-navegacion {
+    background-color: #333; /* Fondo oscuro para la barra de navegación */
+    padding: 10px 20px;      /* Espaciado interno */
+    text-align: center;      /* Centrado del contenido */
+}
+
+.barra-navegacion ul {
+    list-style: none;        /* Elimina los puntos de la lista */
+    margin: 0;               /* Elimina márgenes */
+    padding: 0;              /* Elimina el padding por defecto */
+    display: flex;           /* Hacer que los elementos de la lista estén en fila */
+    justify-content: center; /* Centrado horizontal */
+}
+
+.barra-navegacion ul li {
+    margin-right: 20px;      /* Espaciado entre los elementos */
+}
+
+.barra-navegacion ul li a {
+    color: white;            /* Color de texto blanco */
+    text-decoration: none;   /* Elimina subrayado */
+    font-size: 1rem;         /* Tamaño de fuente */
+    font-weight: bold;       /* Negrita */
+    padding: 10px 20px;      /* Espaciado interno en los botones */
+    border-radius: 5px;      /* Bordes redondeados */
+    background-color: #007bff; /* Fondo azul */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.barra-navegacion ul li a:hover {
+    background-color: #0056b3; /* Fondo azul más oscuro al pasar el mouse */
+}
+
+/* Estilo para los botones */
+.btn, .btn-volver, .btn-logout {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, transform 0.2s; /* Transiciones */
+}
+
+.btn:hover, .btn-volver:hover, .btn-logout:hover {
+    background: #0056b3;
+}
+
+.btn-volver, .btn-logout {
+    background-color: white;
+    color: #007bff;
+    border: 1px solid #007bff;
+    transform: scale(1.05);     /* Efecto de escala al pasar el mouse */
+}
+
+.btn-volver:hover, .btn-logout:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Estilos principales */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+}
+
+main h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+main p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+form input:focus, form select:focus {
+    border-color: #007bff;
+    outline: none;
+    background: #e6f7ff;
+}
+
+/* Estilo para el mensaje de éxito */
+.mensaje-exito {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Estilos del footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    margin-top: auto;
+}
